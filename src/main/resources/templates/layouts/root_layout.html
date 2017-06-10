@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title></title>
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{./webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<link href="./static/css/navbar.css" th:href="@{css/navbar.css}"
+	rel="stylesheet" media="screen" />
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+
+						<a class="navbar-brand" href="#">...</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="./about">About</a></li>
+							<li><a href="./contact">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="./logout">Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div layout:fragment="page-content"></div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span4">
+					<p>
+						&copy; 2017 <a href="#">ishara</a>
+					</p>
+				</div>
+				<div class="span4 text-center">
+
+					<a href="#">About Us</a> | <a href="#">Contact Us</a>| <a href="#">Privacy
+						Policy</a>
+
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Login.. </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+ 
+   
+ 
+    <link href="./css/login.css"
+          th:href="@{/css/login.css}" rel="stylesheet" media="screen"/>
+          
+    
+</head>
+<body>
+
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form"  th:action="@{/verifyUser}"  method="post">
+      <input type="text" placeholder="username" name="userName"  th:required="required"/>
+      <input type="password" placeholder="password" name="password"  th:required="required"/>
+      <button>login</button>
+      
+       <p class="message" style="color:red; font-family:verdana; font-size:14px"  th:text=" ${loginError}"></p>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+ <script src="./js/login.js"
+            th:src="@{/js/login.js}"></script>
+</html>
